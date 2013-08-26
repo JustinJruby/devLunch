@@ -1,0 +1,26 @@
+<h1>Listing lunches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Place</th>
+      <th>Time</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lunches.each do |lunch| %>
+      <tr>
+        <td><%= lunch.place %></td>
+        <td><%= lunch.time %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
