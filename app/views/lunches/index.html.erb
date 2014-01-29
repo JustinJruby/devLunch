@@ -1,13 +1,10 @@
-<h1>Listing lunches</h1>
 
 <table>
   <thead>
     <tr>
       <th>Place</th>
       <th>Time</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Note</th>
     </tr>
   </thead>
 
@@ -15,7 +12,8 @@
     <% @lunches.each do |lunch| %>
       <tr>
         <td><%= lunch.place %></td>
-        <td><%= lunch.time %></td>
+        <td><%= time_ago_in_words lunch.time %></td>
+	<td><%= lunch.note %></td>
       </tr>
     <% end %>
   </tbody>
@@ -23,4 +21,4 @@
 
 <br>
 
-
+Contact @exois on twitter for more infomation. Devlunch is a group of halifax developers that go out on Fridays for lunch!
