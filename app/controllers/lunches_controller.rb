@@ -4,7 +4,7 @@ class LunchesController < ApplicationController
   # GET /lunches
   # GET /lunches.json
   def index
-    @next = Lunch.order(:time).first
+    @next = Lunch.order(:time).reverse.first
     @lunches = Lunch.all
   end
 
