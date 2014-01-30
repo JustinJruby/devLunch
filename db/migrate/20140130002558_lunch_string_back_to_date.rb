@@ -1,8 +1,7 @@
 class LunchStringBackToDate < ActiveRecord::Migration
   def change
- change_table :lunches do |t|
-         t.change :time, :date
-      end
-
+      remove_column :lunches, :time
+      add_column :lunches, :time, :date
+      
   end
 end
