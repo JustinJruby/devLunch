@@ -1,21 +1,28 @@
+<div class="container">
+<div class="">
+    <p class="lead">
+      Contact @exois on twitter for more infomation. Devlunch is a group of Halifax developers that go out on Fridays for lunch!
+    </p>
+</div>
+ 
 <div class="hero-unit">
   <h3>Upcoming Lunch</h3>
   <p>Friday at noon</p>
+  <% if @next.blank? %>
   <p>Shenanigans or Chotchkies</p>
+  <% else %>
+  <p><b><%=@next.place%> <%=@next.time%></b></p>
+  <% end %>
 </div>
 
-<blockquote class="pull-right">
-    <p>Anyone who has lost track of time when using a computer knows the propensity to dream, the urge to make dreams come true and the tendency to miss lunch.</p>
-  <small>Tim Berners-Lee</small>
-</blockquote>
-<br>
+<div class="">
 <b>Past Lunches</b>
 <table class="table table-condensed">
   <thead>
     <tr>
       <th>Where</th>
       <th>When</th>
-      <th>How</th>
+      <th>Verdict</th>
     </tr>
   </thead>
 
@@ -23,14 +30,20 @@
     <% @lunches.each do |lunch| %>
       <tr>
         <td><%= lunch.place %></td>
-        <td><%= time_ago_in_words lunch.time %></td>
+        <td><%= lunch.time %></td>
 	<td><%= lunch.note %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>
 
-<br>
-<p class="lead">
-Contact @exois on twitter for more infomation. Devlunch is a group of halifax developers that go out on Fridays for lunch!
-</p>
+<div class="">
+<div class="col-md-4 clearfix visible-xs">
+<blockquote class="pull-right">
+    <p>Anyone who has lost track of time when using a computer knows the propensity to dream, the urge to make dreams come true and the tendency to miss lunch.</p>
+  <small>Tim Berners-Lee</small>
+</blockquote>
+</div>
+</div>
+</div>

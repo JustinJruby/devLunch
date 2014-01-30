@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130825233725) do
+ActiveRecord::Schema.define(version: 20140130002558) do
 
   create_table "lunches", force: true do |t|
     t.string   "place"
-    t.string   "time"
+    t.date     "time",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "note"

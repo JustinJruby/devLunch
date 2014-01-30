@@ -17,15 +17,11 @@
   </div>
   <div class="field">
     <%= f.label :time %><br>
-    <%= f.text_field :time %>
+    <%= f.date_select :time  %>
   </div>
-<div class="field">
-<%= f.label :note %>
-<%=f.text_area :note, size:"80x5"%>
-</div>
   <div class="field">
-    <%= f.label :secret %><br>
-    <%= f.text_field :secret %>
+  <%= f.label :note %>
+  <%=f.text_area :note, size:"80x5"%>
   </div>
 
   <div class="actions">
