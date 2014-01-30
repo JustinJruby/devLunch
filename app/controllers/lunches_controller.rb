@@ -1,5 +1,6 @@
 class LunchesController < ApplicationController
   before_action :set_lunch, only: [:show, :edit, :update, :destroy]
+  before_action :check_for_lockup, only: [:edit, :update, :new, :destroy, :create]
 
   # GET /lunches
   # GET /lunches.json
